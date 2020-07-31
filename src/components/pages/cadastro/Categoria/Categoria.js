@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import PageDefault from '../../../PageDefault/PageDefault'
+import React, { useState, useEffect } from 'react';
+import PageDefault from '../../../PageDefault/PageDefault';
 import { Link } from 'react-router-dom';
-import FormField from '../../../FormField/index'
+import FormField from '../../../FormField/index';
+import Button from '../../../Button/index';
 
 const CadastroCategoria = () => {
     const valoresIniciais = {
@@ -31,6 +32,18 @@ const CadastroCategoria = () => {
         );
     }
 
+    useEffect(() => {
+        const URL = "http://localhost:3000/categorias";
+
+        fetch(URL)
+            .then(async (respostaDoServidor) => {
+                const resposta = await respostaDoServidor.json();
+                setCategorias([
+                    ...resposta,
+                ]);
+            })
+    }, []);
+
     const setValue = (chave, valor) => {
         setValues({
             ...values,
@@ -46,7 +59,8 @@ const CadastroCategoria = () => {
 
                 <FormField
                     type="text"
-                    label="Nome da Categoria: "
+                    name="nome"
+                    label="Nome da Categoria:"
                     value={values.nome}
                     onChange={handleChange}
                 />
@@ -70,16 +84,16 @@ const CadastroCategoria = () => {
                     onChange={handleChange}
                 />
 
-                <button
+                <Button
                     onClick={() => handleSubmit}>
                     Cadastrar
-                </button>
+                </Button>
             </form>
 
             <ul>
-                {categorias.map((categoria, index) => {
+                {categorias.map((categoria) => {
                     return (
-                        <li key={`${categoria}${index}`}>
+                        <li key={`${categoria.nome}`}>
                             {categoria.nome}
                         </li>
                     )
