@@ -33,7 +33,9 @@ const CadastroCategoria = () => {
     }
 
     useEffect(() => {
-        const URL = "https://interflix.herokuapp.com/categorias";
+        const URL = window.location.hostname.includes('localhost')
+            ? 'http://localhost:8080/categorias'
+            : "https://interflix.herokuapp.com/categorias";
 
         fetch(URL)
             .then(async (respostaDoServidor) => {
