@@ -1,16 +1,56 @@
-import React from 'react';
-import Menu from '../../Menu/Menu';
-import dadosIniciais from '../../../data/dados_iniciais.json';
+import React, { useEffect, useState } from 'react';
 import BannerMain from '../../BannerMain';
 import Carousel from '../../Carousel';
-import Footer from '../../Footer';
+import categoriasRepository from '../../../repositories/categorias'
+import PageDefault from '../../PageDefault/PageDefault';
 
 function Home() {
-  return (
-    <div style={{ background: "#141414" }}>
-      <Menu />
 
-      <BannerMain
+  const [dadosIniciais, setDadosIniciais] = useState([]);
+
+  useEffect(() => {
+    // http://localhost:8080/categorias?_embed=videos
+    categoriasRepository.getAllWithVideos()
+      .then((categoriasComVideos) => {
+        setDadosIniciais(categoriasComVideos);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, []);
+
+  return (
+    <PageDefault paddingAll={0}>
+
+      {dadosIniciais.length === 0 && (<div>Loading...</div>)}
+
+      {dadosIniciais.map((categoria, indice) => {
+        if (indice === 0) {
+          return (
+            <div>
+              <BannerMain
+                videoTitle={dadosIniciais[0].videos[0].titulo}
+                url={dadosIniciais[0].videos[0].url}
+                videoDescription={"O que e o front-end"}
+              />
+
+              <Carousel
+                ignoreFirstVideo
+                category={dadosIniciais[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Carousel
+            key={categoria.id}
+            category={categoria}
+          />
+        );
+      })}
+
+      {/* <BannerMain
         videoTitle={dadosIniciais.categorias[0].videos.titulo}
         url={dadosIniciais.categorias[0].videos[0].url}
         videoDescription={"O que e o front-end"}
@@ -39,10 +79,8 @@ function Home() {
 
       <Carousel
         category={dadosIniciais.categorias[5]}
-      />
-
-      <Footer />
-    </div>
+      /> */}
+    </PageDefault>
   );
 }
 

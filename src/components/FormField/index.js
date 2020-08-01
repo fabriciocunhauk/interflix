@@ -58,36 +58,36 @@ const Input = styled.input`
     transform: scale(.6) translateY(-10px);
   }
   ${({ value }) => {
-        const hasValue = value.length > 0;
-        return hasValue && css`
+    const hasValue = value.length > 0;
+    return hasValue && css`
         &:not([type='color']) + ${Label.Text} {
           transform: scale(.6) translateY(-10px);
         }
       `;
-    }
-    }
+  }
+  }
 `;
 
 const FormField = ({ label, type, name, value, onChange }) => {
-    const isTypeTextArea = type === 'textarea';
-    const tag = isTypeTextArea ? 'textarea' : 'input';
+  const isTypeTextArea = type === 'textarea';
+  const tag = isTypeTextArea ? 'textarea' : 'input';
 
-    return (
-        <FormFieldWrapper>
-            <Label>
-                <Input
-                    as={tag}
-                    type={type}
-                    value={value}
-                    name={name}
-                    onChange={onChange}
-                />
-                <Label.Text>
-                    {label}
-                </Label.Text>
-            </Label>
-        </FormFieldWrapper>
-    );
+  return (
+    <FormFieldWrapper>
+      <Label>
+        <Input
+          as={tag}
+          type={type}
+          value={value}
+          name={name}
+          onChange={onChange}
+        />
+        <Label.Text>
+          {label}
+        </Label.Text>
+      </Label>
+    </FormFieldWrapper>
+  );
 }
 
 export default FormField;
