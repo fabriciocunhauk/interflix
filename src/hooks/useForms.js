@@ -6,15 +6,15 @@ const useForm = (valoresIniciais) => {
     const setValue = (chave, valor) => {
         setValues({
             ...values,
-            [chave]: valor
-        })
+            [chave]: valor,
+        });
     }
 
     const handleChange = (infosDoEvento) => {
 
         setValue(
             infosDoEvento.target.getAttribute('name'),
-            infosDoEvento.target.value
+            infosDoEvento.target.value,
         );
     }
 
