@@ -2,8 +2,6 @@
 
 Inteflix is a Netflix clone listing youtube videos.
 
-To see it check the link: https://react-js-interflix.vercel.app/
-
 ![](https://media-exp1.licdn.com/dms/image/C4D22AQHyFVjgWw5yrQ/feedshare-shrink_800/0?e=1599091200&v=beta&t=2k9U6Bq2zQS0hUM77C4xuJmYfL3EcmKrqX9NQyLmt9M)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
