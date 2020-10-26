@@ -1,6 +1,6 @@
 ## Interflix
 
-Inteflix is a Netflix like that you can make a playlist using youtube videos.
+Inteflix is a Netflix like page that you can make a playlist using youtube videos.
 
 
 <img src="src/assets/imagens/Front-photo.PNG">
