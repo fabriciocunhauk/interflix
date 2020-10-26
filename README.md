@@ -3,7 +3,7 @@
 Inteflix is a Netflix like that you can make a playlist using youtube videos.
 
 
-<img src="assets/imagens/front-photo.PNG">
+<img src="src/assets/imagens/Front-photo.PNG">
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
