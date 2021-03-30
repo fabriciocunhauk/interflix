@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import closeIcon from '../../assets/imagens/icon-close.svg';
 
 export const Title = styled.h3`
   font-style: normal;
@@ -33,23 +34,21 @@ export const ExtraLink = styled.a`
   }
 `;
 
-export const VideoCardList = styled.ul`
-  margin: 0;
-  padding-left: 0;
-  padding-bottom: 32px;
-  list-style: none;
-  display: flex;
-  overflow-x: auto;
-  flex-direction: row;
-  
-  li {
-    margin-right: 16px;
-  }
-`;
-
 export const VideoCardGroupContainer = styled.section`
   color: white;
   min-height: 197px;
   margin-left: 5%;
   margin-bottom: 16px;
 `;
+
+export const CloseButton = styled.img`
+  cursor: pointer;
+  position: absolute;
+  margin-left: 285px;
+  margin-top: 10px;
+  z-index: 1;
+`;
+
+CloseButton.defaultProps = {
+  src: closeIcon
+};

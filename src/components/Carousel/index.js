@@ -1,5 +1,5 @@
 import React from 'react';
-import { VideoCardGroupContainer, VideoCardList, Title, ExtraLink } from './styles';
+import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
@@ -33,6 +33,7 @@ function Carousel({
 
           return (
             <SliderItem key={video.titulo}>
+              <CloseButton />
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}

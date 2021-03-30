@@ -29,13 +29,9 @@ const Container = styled.ul`
 `;
 
 export const SliderItem = styled.li`
+  display: flex;
   margin-right: 16px;
-  img {
-    margin: 16px;
-    width: 298px;
-    height: 197px;
-    object-fit: cover;
-  }
+  outline: none;
 `;
 
 
@@ -55,4 +51,4 @@ const Slider = ({ children }) => (
   </Container>
 );
 
-export default Slider; 
+export default Slider;
