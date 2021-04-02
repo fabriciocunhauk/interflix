@@ -1,16 +1,29 @@
 import React from 'react';
 import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles';
+import { useHistory } from 'react-router-dom';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
+import videosRepository from '../../repositories/videos';
 
 function Carousel({
   ignoreFirstVideo,
   category,
 }) {
+
+  const history = useHistory();
+
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
+
+  function handleDelete(videoId) {
+    videosRepository.deleteVideo(videoId)
+      .then(() => {
+        history.push("/");
+      })
+  }
+
   return (
     <VideoCardGroupContainer>
       {categoryTitle && (
@@ -33,7 +46,8 @@ function Carousel({
 
           return (
             <SliderItem key={video.titulo}>
-              <CloseButton />
+
+              <CloseButton onClick={() => handleDelete(video.id)} />
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}

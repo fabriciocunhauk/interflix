@@ -56,22 +56,10 @@
       "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
     },
     {
-      "id": 3,
-      "categoriaId": 1,
-      "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
-    },
-    {
       "id": 4,
       "categoriaId": 1,
       "titulo": "Pare de chutar e aprenda a display: inline #01",
       "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE"
-    },
-    {
-      "id": 5,
-      "categoriaId": 1,
-      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0"
     },
     {
       "id": 6,
@@ -198,24 +186,6 @@
       "url": "https://www.youtube.com/watch?v=YQr5CIRZ4Og",
       "categoriaId": 1,
       "id": 26
-    },
-    {
-      "titulo": "",
-      "url": "",
-      "categoriaId": 1,
-      "id": 27
-    },
-    {
-      "titulo": "outro teste",
-      "url": "https://www.youtube.com/watch?v=-VuFovd0cpw",
-      "categoriaId": 1,
-      "id": 28
-    },
-    {
-      "titulo": "teste",
-      "url": "https://www.youtube.com/watch?v=-VuFovd0cpw",
-      "categoriaId": 1,
-      "id": 29
     }
   ]
 }

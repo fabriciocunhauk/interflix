@@ -20,7 +20,7 @@ const CadastroVideo = () => {
         categoriasRepository
             .getAll()
             .then(categoriasFromServer => {
-
+                console.log(categoriasFromServer);
                 setCategorias(categoriasFromServer)
             })
     }, []);
@@ -35,7 +35,6 @@ const CadastroVideo = () => {
                 const categoriaEscolhida = categorias.find(categoria => {
                     return categoria.titulo === values.categoria;
                 })
-                console.log(categoriaEscolhida);
 
                 videosRepository.create({
                     titulo: values.titulo,

@@ -21,7 +21,28 @@ const create = (objetoDoVideo) => {
         });
 }
 
+const deleteVideo = (idDoVideo) => {
+
+    console.log(idDoVideo);
+
+    return fetch(`${URL_VIDEOS}/${idDoVideo}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-type': 'application/json',
+        },
+    })
+        .then(async (respostaDoServidor) => {
+            if (respostaDoServidor.ok) {
+                const resposta = await respostaDoServidor.json();
+                console.log(resposta);
+                return resposta
+            }
+            throw new Error('Nao foi possivel deletar os dados')
+        });
+}
+
 
 export default {
     create,
+    deleteVideo
 }
