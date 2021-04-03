@@ -33,6 +33,7 @@ const CadastroVideo = () => {
                 event.preventDefault();
 
                 const categoriaEscolhida = categorias.find(categoria => {
+                    console.log(categoria);
                     return categoria.titulo === values.categoria;
                 })
 

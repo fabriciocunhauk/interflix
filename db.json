@@ -68,52 +68,16 @@
       "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w"
     },
     {
-      "id": 7,
-      "categoriaId": 1,
-      "titulo": "Novidades do Angular v9",
-      "url": "https://www.youtube.com/watch?v=34uHo7hFmG0"
-    },
-    {
       "id": 8,
       "categoriaId": 2,
       "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
       "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
     },
     {
-      "id": 9,
-      "categoriaId": 2,
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=6o6-bKOZOEY"
-    },
-    {
-      "id": 10,
-      "categoriaId": 2,
-      "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
-      "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY"
-    },
-    {
-      "id": 11,
-      "categoriaId": 2,
-      "titulo": "API: Dicionário do Programador",
-      "url": "https://www.youtube.com/watch?v=vGuqKIRWosk"
-    },
-    {
-      "id": 12,
-      "categoriaId": 2,
-      "titulo": "Usando Git Direito",
-      "url": "https://www.youtube.com/watch?v=6OokP-NE49k"
-    },
-    {
       "id": 13,
       "categoriaId": 3,
       "titulo": "Teste de Turing",
       "url": "https://www.youtube.com/watch?v=BaPGU4JWa34"
-    },
-    {
-      "id": 14,
-      "categoriaId": 3,
-      "titulo": "O que é Data Science?",
-      "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s"
     },
     {
       "id": 15,
@@ -134,18 +98,6 @@
       "url": "https://www.youtube.com/watch?v=frD_IiY_A3E"
     },
     {
-      "id": 18,
-      "categoriaId": 4,
-      "titulo": "Gattaca",
-      "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs"
-    },
-    {
-      "id": 19,
-      "categoriaId": 4,
-      "titulo": "A Chegada",
-      "url": "https://www.youtube.com/watch?v=rNciXGzYZms"
-    },
-    {
       "id": 20,
       "categoriaId": 4,
       "titulo": "Feitiço do Tempo",
@@ -158,34 +110,10 @@
       "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
     },
     {
-      "id": 22,
-      "categoriaId": 5,
-      "titulo": "Assassins Creed Valhalla",
-      "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U"
-    },
-    {
-      "id": 23,
-      "categoriaId": 5,
-      "titulo": "God of War 4",
-      "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE"
-    },
-    {
-      "id": 24,
-      "categoriaId": 5,
-      "titulo": "Resident Evil 8",
-      "url": "https://www.youtube.com/watch?v=JSapXD9vxYA"
-    },
-    {
       "titulo": "Video padrao",
       "url": "https://www.youtube.com/watch?v=c8mVlakBESE",
       "categoriaId": 1,
       "id": 25
-    },
-    {
-      "titulo": "meu video",
-      "url": "https://www.youtube.com/watch?v=YQr5CIRZ4Og",
-      "categoriaId": 1,
-      "id": 26
     }
   ]
 }
