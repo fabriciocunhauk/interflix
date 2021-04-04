@@ -20,7 +20,6 @@ const CadastroVideo = () => {
         categoriasRepository
             .getAll()
             .then(categoriasFromServer => {
-                console.log(categoriasFromServer);
                 setCategorias(categoriasFromServer)
             })
     }, []);
@@ -33,9 +32,8 @@ const CadastroVideo = () => {
                 event.preventDefault();
 
                 const categoriaEscolhida = categorias.find(categoria => {
-                    console.log(categoria);
-                    return categoria.titulo === values.categoria;
-                })
+                    return categoria.titulo.toLowerCase() === values.categoria.toLowerCase();
+                });
 
                 videosRepository.create({
                     titulo: values.titulo,

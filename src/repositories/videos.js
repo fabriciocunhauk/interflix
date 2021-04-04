@@ -31,14 +31,6 @@ const deleteVideo = (idDoVideo) => {
             'Content-type': 'application/json',
         },
     })
-        .then(async (respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-                const resposta = await respostaDoServidor.json();
-                console.log(resposta);
-                return resposta
-            }
-            throw new Error('Nao foi possivel deletar os dados')
-        });
 }
 
 

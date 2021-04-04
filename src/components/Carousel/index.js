@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
@@ -13,8 +13,15 @@ function Carousel({
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
 
+  const [videosToDisplay, setVideosToDisplay] = useState(videos);
+
   function handleDelete(videoId) {
     videosRepository.deleteVideo(videoId)
+      .then(result => {
+        const updatedDb = videos.filter(video => video.id !== videoId)
+
+        setVideosToDisplay(updatedDb)
+      })
   }
 
   return (
@@ -32,7 +39,7 @@ function Carousel({
         </>
       )}
       <Slider>
-        {videos.map((video, index) => {
+        {videosToDisplay.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
