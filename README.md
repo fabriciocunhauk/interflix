@@ -10,12 +10,13 @@ https://react-js-interflix.vercel.app/
 
 Run:
 
-1
 ```
 npm install
 ```
 
-2
+##How to start
+
+Run:
 ```
 npm start
 ```
