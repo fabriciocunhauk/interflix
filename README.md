@@ -28,6 +28,6 @@ Create new categories and add videos to that.
 
 ##Technologies used
 
-This web app was created using Reeact, and Styled-components
+This web app was created using Reeact, json-server, and Styled-Components
 
 
