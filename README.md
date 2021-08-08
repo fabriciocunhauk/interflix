@@ -1,24 +1,33 @@
 ## Interflix
 
 Inteflix is a Netflix like page that you can make a playlist using youtube videos.
+You can create a category and add or remove videos.
 https://react-js-interflix.vercel.app/
 
 
 <img src="src/assets/imagens/Front-photo.PNG">
 
-##How to install
+##HowTo
+
+First of all, clone the React.js-interflix repo:
+
+```
+# git clone https://github.com/fabriciocunhauk/React.js-interflix.git
+```
+
+##Install
 
 Run:
 
 ```
-npm install
+# npm install
 ```
 
-##How to start
+##Start
 
 Run:
 ```
-npm start
+# npm start
 ```
 ##How to use.
 
