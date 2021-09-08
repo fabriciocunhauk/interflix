@@ -8,7 +8,7 @@ import useForm from '../../../../hooks/useForms'
 const CadastroCategoria = () => {
     const valoresIniciais = {
         nome: '',
-        descricao: '',
+        titulo: '',
         cor: ''
     }
 
@@ -17,13 +17,13 @@ const CadastroCategoria = () => {
     const [categorias, setCategorias] = useState([]);
 
     const handleSubmit = (infosDoEvento) => {
+        infosDoEvento.preventDefault();
+
         setCategorias([
             ...categorias, values
         ]);
 
         clearForm();
-
-        infosDoEvento.preventDefault();
     }
 
     useEffect(() => {
@@ -40,8 +40,6 @@ const CadastroCategoria = () => {
             })
     }, []);
 
-
-
     return (
         <PageDefault>
             <h1>Cadastro de Categoria: {values.nome}</h1>
@@ -56,16 +54,13 @@ const CadastroCategoria = () => {
                     onChange={handleChange}
                 />
 
-
                 <FormField
                     label="Descricao:"
                     type="textarea"
                     value={values.descricao}
-                    name="descricao"
+                    name="titulo"
                     onChange={handleChange}
                 />
-
-
 
                 <FormField
                     label="Cor"
