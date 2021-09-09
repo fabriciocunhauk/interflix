@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../PageDefault/PageDefault';
-import { Link } from 'react-router-dom';
 import FormField from '../../../FormField/index';
 import Button from '../../../Button/index';
-import useForm from '../../../../hooks/useForms'
+import useForm from '../../../../hooks/useForms';
+import categoryRepository from '../../../../repositories/categorias';
 
 const CadastroCategoria = () => {
+    const history = useHistory();
     const valoresIniciais = {
         nome: '',
         titulo: '',
@@ -22,6 +24,15 @@ const CadastroCategoria = () => {
         setCategorias([
             ...categorias, values
         ]);
+
+        categoryRepository.createCategory({
+            nome: values.nome,
+            titulo: values.titulo,
+            cor: values.cor,
+        })
+            .then(() => {
+                history.push("/");
+            })
 
         clearForm();
     }

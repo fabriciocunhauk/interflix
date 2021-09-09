@@ -2,34 +2,48 @@ import config from '../config';
 
 const URL_CATEGORIES = `${config.URL_BACKEND}/categorias`;
 
-const getAll = () => {
+const createCategory = async (objetoDoVideo) => {
 
-    return fetch(`${URL_CATEGORIES}`)
-        .then(async (respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-                const resposta = await respostaDoServidor.json();
+    const respostaDoServidor = await fetch(`${URL_CATEGORIES}`, {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json',
+        },
+        body: JSON.stringify(objetoDoVideo)
+    });
+    if (respostaDoServidor.ok) {
+        const resposta = await respostaDoServidor.json();
 
-                return resposta
-            }
-            throw new Error('Nao foi possivel pegar os dados')
-        });
+        return resposta;
+    }
+    throw new Error('Nao foi possivel cadastrar os dados');
 }
 
-const getAllWithVideos = () => {
+const getAll = async () => {
 
-    return fetch(`${URL_CATEGORIES}?_embed=videos`)
-        .then(async (respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-                const resposta = await respostaDoServidor.json();
+    const respostaDoServidor = await fetch(`${URL_CATEGORIES}`);
+    if (respostaDoServidor.ok) {
+        const resposta = await respostaDoServidor.json();
 
-                return resposta
-            }
-            throw new Error('Nao foi possivel pegar os dados')
-        });
+        return resposta;
+    }
+    throw new Error('Nao foi possivel pegar os dados');
+}
+
+const getAllWithVideos = async () => {
+
+    const respostaDoServidor = await fetch(`${URL_CATEGORIES}?_embed=videos`);
+    if (respostaDoServidor.ok) {
+        const resposta = await respostaDoServidor.json();
+
+        return resposta;
+    }
+    throw new Error('Nao foi possivel pegar os dados');
 }
 
 
 export default {
+    createCategory,
     getAllWithVideos,
     getAll
 }
