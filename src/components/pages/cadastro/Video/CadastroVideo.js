@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PageDefault from '../../../PageDefault/PageDefault';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useForm from '../../../../hooks/useForms';
 import FormField from '../../../FormField';
 import Button from '../../../Button/index';
@@ -8,7 +8,7 @@ import videosRepository from '../../../../repositories/videos';
 import categoriasRepository from '../../../../repositories/categorias';
 
 const CadastroVideo = () => {
-    const history = useHistory();
+    const history = useNavigate();
     const [categorias, setCategorias] = useState([])
     const { handleChange, values } = useForm({
         titulo: '',

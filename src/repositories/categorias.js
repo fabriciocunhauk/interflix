@@ -41,9 +41,10 @@ const getAllWithVideos = async () => {
     throw new Error('Nao foi possivel pegar os dados');
 }
 
-
-export default {
+const categories = {
     createCategory,
     getAllWithVideos,
     getAll
 }
+
+export default categories

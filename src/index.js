@@ -1,23 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home/Home';
 import CadastroVideo from './components/pages/cadastro/Video/CadastroVideo';
 import CadastroCategoria from './components/pages/cadastro/Categoria/Categoria';
+import './index.css';
+
+const root = createRoot(document.getElementById('root'));
 
 // React router DOM
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const page404 = () => (<div>Page 404</div>)
 
-ReactDOM.render(
+root.render(
   <BrowserRouter>
-    <Switch>
+    <Routes>
       <Route path="/" component={Home} exact />
       <Route path="/cadastro/video" component={CadastroVideo} />
       <Route path="/cadastro/categoria" component={CadastroCategoria} />
       <Route component={page404} />
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById('root')
+    </Routes>
+  </BrowserRouter>
 );

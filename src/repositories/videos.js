@@ -31,8 +31,9 @@ const deleteVideo = (idDoVideo) => {
     })
 }
 
-
-export default {
+const videos = {
     create,
     deleteVideo
 }
+
+export default videos;
