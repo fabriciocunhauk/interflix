@@ -1,4 +1,4 @@
-import config from '../config';
+import config from '../config/index.js';
 
 const URL_CATEGORIES = `${config.URL_BACKEND}/categorias`;
 
@@ -32,18 +32,16 @@ const getAll = async () => {
 
 const getAllWithVideos = async () => {
 
-    const respostaDoServidor = await fetch(`${URL_CATEGORIES}?_embed=videos`);
-    if (respostaDoServidor.ok) {
-        const resposta = await respostaDoServidor.json();
-
-        return resposta;
-    }
-    throw new Error('Nao foi possivel pegar os dados');
+    const response = await fetch(`${URL_CATEGORIES}?_embed=videos`).then(categories => categories.json());
+  
+    return response;
 }
 
 
-export default {
+const exportedObject = {
     createCategory,
     getAllWithVideos,
     getAll
-}
+};
+
+export default exportedObject;

@@ -1,22 +1,22 @@
 {
   "name": "interflix",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "concurrently": "^5.3.0",
-    "json-server": "^0.16.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "react-slick": "^0.27.1",
-    "styled-components": "^5.1.1"
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "concurrently": "^7.2.1",
+    "json-server": "^0.17.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "5.0.1",
+    "styled-components": "^5.3.11"
   },
   "scripts": {
-    "server": "node ./server.js",
+    "server": "json-server --watch db.json --port 8000",
     "dev": "concurrently \"react-scripts start\" \"npm run server\"",
     "start": "npm run server",
     "build": "react-scripts build",
@@ -37,5 +37,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "ajv": "^7.2.4"
+  },
+  "resolutions": {
+    "styled-components": "^5"
   }
 }

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles';
-import VideoCard from './components/VideoCard';
-import Slider, { SliderItem } from './components/Slider';
-import videosRepository from '../../repositories/videos';
+import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles.js';
+import VideoCard from './components/VideoCard/index.js';
+import  { Slider, SliderItem } from './components/Slider/index.js';
+import videosRepository from '../../repositories/videos.js';
 
 function Carousel({
   ignoreFirstVideo,

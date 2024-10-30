@@ -1,23 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import BannerMain from '../../BannerMain';
-import Carousel from '../../Carousel';
-import categoriasRepository from '../../../repositories/categorias'
-import PageDefault from '../../PageDefault/PageDefault';
+import BannerMain from '../../BannerMain/index.js';
+import Carousel from '../../Carousel/index.js';
+// import categoriasRepository from '../../../repositories/categorias.js'
+import PageDefault from '../../PageDefault/PageDefault.js';
 
-function Home() {
+ function Home() {
 
   const [dadosIniciais, setDadosIniciais] = useState([]);
 
   useEffect(() => {
-    // http://localhost:8080/categorias?_embed=videos
-    categoriasRepository.getAllWithVideos()
-      .then((categoriasComVideos) => {
-        setDadosIniciais(categoriasComVideos);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
+    fetch('http://localhost:8000/categorias?_embed=videos')
+    .then(response =>  response.json()).then(categories => setDadosIniciais(categories));
   }, []);
+
+    console.log(dadosIniciais);
 
   return (
     <PageDefault paddingAll={0}>

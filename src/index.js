@@ -1,23 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import './index.css';
-import Home from './components/pages/Home/Home';
-import CadastroVideo from './components/pages/cadastro/Video/CadastroVideo';
-import CadastroCategoria from './components/pages/cadastro/Categoria/Categoria';
+import Home from './components/pages/Home/Home.js';
+import CadastroVideo from './components/pages/cadastro/Video/CadastroVideo.js';
+import CadastroCategoria from './components/pages/cadastro/Categoria/Categoria.js';
 
 // React router DOM
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-const page404 = () => (<div>Page 404</div>)
+const Page404 = () => (<div>Page 404</div>)
 
-ReactDOM.render(
+const container = document.getElementById('root');
+const root = createRoot(container);
+
+root.render(
   <BrowserRouter>
-    <Switch>
-      <Route path="/" component={Home} exact />
-      <Route path="/cadastro/video" component={CadastroVideo} />
-      <Route path="/cadastro/categoria" component={CadastroCategoria} />
-      <Route component={page404} />
-    </Switch>
-  </BrowserRouter>,
-  document.getElementById('root')
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/cadastro/video" element={<CadastroVideo />} />
+      <Route path="/cadastro/categoria" element={<CadastroCategoria />} />
+      <Route path="*" element={<Page404 />} />
+    </Routes>
+  </BrowserRouter>
 );

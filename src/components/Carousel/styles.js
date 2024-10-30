@@ -48,7 +48,3 @@ export const CloseButton = styled.img`
   margin-top: 10px;
   z-index: 1;
 `;
-
-CloseButton.defaultProps = {
-  src: closeIcon
-};

@@ -1,6 +1,6 @@
 import React from 'react';
-import VideoIframeResponsive from './components/VideoIframeResponsive';
-import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles';
+import VideoIframeResponsive from './components/VideoIframeResponsive/index.js';
+import { BannerMainContainer, ContentAreaContainer, WatchButton } from './styles.js';
 
 function getYouTubeId(youtubeURL) {
   return youtubeURL

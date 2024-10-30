@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../Button/index';
+import Button from '../Button/index.js';
 import './Menu.css';
 
 const Menu = () => {

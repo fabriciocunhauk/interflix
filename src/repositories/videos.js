@@ -1,4 +1,4 @@
-import config from '../config';
+import config from '../config/index.js';
 
 const URL_VIDEOS = `${config.URL_BACKEND}/videos`;
 
@@ -31,8 +31,9 @@ const deleteVideo = (idDoVideo) => {
     })
 }
 
-
-export default {
+const exportedObject = {
     create,
     deleteVideo
-}
+};
+
+export default exportedObject;

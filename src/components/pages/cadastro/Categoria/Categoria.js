@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
-import PageDefault from '../../../PageDefault/PageDefault';
-import FormField from '../../../FormField/index';
-import Button from '../../../Button/index';
-import useForm from '../../../../hooks/useForms';
-import categoryRepository from '../../../../repositories/categorias';
+import { Link, useNavigate } from 'react-router-dom';
+import PageDefault from '../../../PageDefault/PageDefault.js';
+import FormField from '../../../FormField/index.js';
+import Button from '../../../Button/index.js';
+import useForm from '../../../../hooks/useForms.js';
+import categoryRepository from '../../../../repositories/categorias.js';
 
 const CadastroCategoria = () => {
-    const history = useHistory();
+    const history = useNavigate();
     const valoresIniciais = {
         nome: '',
         titulo: '',

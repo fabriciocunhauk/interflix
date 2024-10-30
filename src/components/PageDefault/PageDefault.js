@@ -1,6 +1,6 @@
 import React from 'react';
-import Menu from '../Menu/Menu';
-import Footer from '../Footer/index';
+import Menu from '../Menu/Menu.js';
+import Footer from '../Footer/index.js';
 import styled, { css } from 'styled-components';
 
 const Main = styled.main`
