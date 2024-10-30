@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import closeIcon from '../../assets/imagens/icon-close.svg';
 
 export const Title = styled.h3`
   font-style: normal;
@@ -44,7 +43,12 @@ export const VideoCardGroupContainer = styled.section`
 export const CloseButton = styled.img`
   cursor: pointer;
   position: absolute;
-  margin-left: 285px;
-  margin-top: 10px;
-  z-index: 1;
+  top: 10px;
+  right: 10px;
+  z-index: 10;
+  padding: 2px;
+
+  &:hover {
+        background: #6BD1FF;
+    }
 `;

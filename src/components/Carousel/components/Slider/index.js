@@ -30,6 +30,7 @@ const Container = styled.ul`
 `;
 
 export const SliderItem = styled.li`
+  position: relative;
   display: flex;
   margin-right: 16px;
   outline: none;

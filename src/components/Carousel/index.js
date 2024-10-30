@@ -3,6 +3,7 @@ import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles
 import VideoCard from './components/VideoCard/index.js';
 import  { Slider, SliderItem } from './components/Slider/index.js';
 import videosRepository from '../../repositories/videos.js';
+import closeIcon from '../../assets/imagens/icon-close.svg';
 
 function Carousel({
   ignoreFirstVideo,
@@ -47,7 +48,7 @@ function Carousel({
           return (
             <SliderItem key={video.titulo}>
 
-              <CloseButton onClick={() => handleDelete(video.id)} />
+              <CloseButton onClick={() => handleDelete(video.id)}  src={closeIcon}/>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
