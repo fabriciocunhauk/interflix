@@ -50,208 +50,142 @@
       "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
     },
     {
-      "id": 8,
+      "id": 2,
       "categoriaId": 2,
       "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
       "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM"
     },
     {
-      "id": 16,
+      "id": 3,
       "categoriaId": 3,
       "titulo": "Como ingressar no mercado de Data Science?",
       "url": "https://www.youtube.com/watch?v=gxyjGmOV540"
     },
     {
-      "id": 20,
+      "id": 4,
       "categoriaId": 4,
       "titulo": "Feitiço do Tempo",
       "url": "https://www.youtube.com/watch?v=zi8d69P9NvI"
     },
     {
-      "id": 21,
+      "id": 5,
       "categoriaId": 5,
       "titulo": "Final Fantasy 7",
       "url": "https://www.youtube.com/watch?v=I_ATSCTnUD8"
     },
     {
-      "id": 2,
+      "id": 6,
       "categoriaId": 1,
       "titulo": "SEO com React",
       "url": "https://www.youtube.com/watch?v=c8mVlakBESE"
     },
     {
+      "id": 7,
       "categoriaId": 1,
       "titulo": "O que faz uma desenvolvedora front-end? #HipstersPontoTube",
-      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw",
-      "id": 22
+      "url": "https://www.youtube.com/watch?v=ZY3-MFxVdEw"
     },
     {
+      "id": 8,
       "categoriaId": 1,
       "titulo": "Componentização com VanillaJS #AluraMais",
-      "url": "https://www.youtube.com/watch?v=LatCKpcOMak",
-      "id": 23
+      "url": "https://www.youtube.com/watch?v=LatCKpcOMak"
     },
     {
+      "id": 9,
       "titulo": "Pare de chutar e aprenda a display: inline #01",
       "url": "https://www.youtube.com/watch?v=5PS6ku8NzIE",
-      "categoriaId": 1,
-      "id": 24
+      "categoriaId": 1
     },
     {
-      "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
-      "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0",
-      "id": 25
-    },
-    {
-      "titulo": "PERCURSO em NÍVEL em ÁRVORE BINÁRIA | Estruturas de Dados #14",
-      "url": "https://www.youtube.com/watch?v=UOK7nS2E9xM",
-      "id": 26
-    },
-    {
-      "titulo": "",
-      "url": "",
-      "id": 27
-    },
-    {
+      "id": 10,
       "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
       "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 28
+      "categoriaId": 2
     },
     {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 29
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 30
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 31
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 32
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 35
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 36
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 37
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "id": 38
-    },
-    {
-      "titulo": "Coders4Tips - S01E04: GitHub CLI - Uma Nova Experiência no Github!",
-      "url": "https://www.youtube.com/watch?v=1zkgdLZEdwM",
-      "categoriaId": 2,
-      "id": 39
-    },
-    {
+      "id": 11,
       "titulo": "Programei 4 robôs que criam vídeos para mim no YouTube",
       "url": "https://www.youtube.com/watch?v=kjhu1LEmRpY",
-      "categoriaId": 2,
-      "id": 40
+      "categoriaId": 2
     },
     {
+      "id": 12,
       "titulo": "Teste de Turing",
       "url": "https://www.youtube.com/watch?v=BaPGU4JWa34",
-      "categoriaId": 3,
-      "id": 41
+      "categoriaId": 3
     },
     {
+      "id": 13,
       "titulo": "O que é Data Science",
       "url": "https://www.youtube.com/watch?v=5b9Z8toVaAU&t=9s",
-      "categoriaId": 3,
-      "id": 43
+      "categoriaId": 3
     },
     {
+      "id": 14,
       "titulo": "Melhor forma de aprender Python",
       "url": "https://www.youtube.com/watch?v=Gojqw9BQ5qY",
-      "categoriaId": 3,
-      "id": 44
+      "categoriaId": 3
     },
     {
-      "titulo": "Interestellar",
-      "url": "https://www.youtube.com/watch?v=frD_IiY_A3E",
-      "categoriaId": 4,
-      "id": 45
-    },
-    {
+      "id": 16,
       "titulo": "Gattaca",
       "url": "https://www.youtube.com/watch?v=Dl0tYLbrhhs",
-      "categoriaId": 4,
-      "id": 46
+      "categoriaId": 4
     },
     {
+      "id": 17,
       "titulo": "A Chegada",
       "url": "https://www.youtube.com/watch?v=rNciXGzYZms",
-      "categoriaId": 4,
-      "id": 47
+      "categoriaId": 4
     },
     {
+      "id": 18,
       "titulo": "Assassins Creed Valhalla",
       "url": "https://www.youtube.com/watch?v=KDfdjB9uL0U",
-      "categoriaId": 5,
-      "id": 48
+      "categoriaId": 5
     },
     {
+      "id": 19,
       "titulo": "God of War 4",
       "url": "https://www.youtube.com/watch?v=FyIwEFXOcaE",
-      "categoriaId": 5,
-      "id": 49
+      "categoriaId": 5
     },
     {
+      "id": 20,
       "titulo": "Resident Evil 8",
       "url": "https://www.youtube.com/watch?v=JSapXD9vxYA",
-      "categoriaId": 5,
-      "id": 50
+      "categoriaId": 5
     },
     {
+      "id": 21,
       "titulo": "Pokémon Let's Go Pikachu/Eevee",
       "url": "https://www.youtube.com/watch?v=L56q_k2ydrs",
-      "categoriaId": 5,
-      "id": 51
+      "categoriaId": 5
     },
     {
+      "id": 22,
       "titulo": "Template String: Interpolando strings com JavaScript #AluraMais",
       "url": "https://www.youtube.com/watch?v=ORI_HTXaIw0",
-      "categoriaId": 1,
-      "id": 52
+      "categoriaId": 1
     },
     {
+      "id": 23,
       "titulo": "Qual é a melhor linguagem de programação? #HipstersPontoTube",
       "url": "https://www.youtube.com/watch?v=Uh-GNH-t89w",
-      "categoriaId": 1,
-      "id": 53
+      "categoriaId": 1
     },
     {
+      "id": 24,
       "titulo": "Base para aprender os frameworks",
       "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI",
-      "categoriaId": 1,
-      "id": 55
+      "categoriaId": 1
     },
     {
+      "id": 25,
       "titulo": "Novidades do Angular v9",
       "url": "https://www.youtube.com/watch?v=34uHo7hFmG0",
-      "categoriaId": 1,
-      "id": 56
+      "categoriaId": 1
     }
   ]
 }

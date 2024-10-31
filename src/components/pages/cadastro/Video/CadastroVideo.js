@@ -6,6 +6,7 @@ import FormField from '../../../FormField/index.js';
 import Button from '../../../Button/index.js';
 import videosRepository from '../../../../repositories/videos.js';
 import categoriasRepository from '../../../../repositories/categorias.js';
+import { NavLink } from '../../../NavLink/index.js';
 
 const CadastroVideo = () => {
     const history = useNavigate();
@@ -70,9 +71,9 @@ const CadastroVideo = () => {
                 </Button>
             </form>
 
-            <Link to="/cadastro/categoria">
-                Cadastro categoria
-            </Link>
+            <NavLink to="/cadastro/categoria">
+                Cadastar categoria
+            </NavLink>
         </PageDefault>
     );
 };

@@ -19,9 +19,13 @@ function Carousel({
   function handleDelete(videoId) {
     videosRepository.deleteVideo(videoId)
       .then(result => {
-        const updatedDb = videos.filter(video => video.id !== videoId)
-
-        setVideosToDisplay(updatedDb)
+        console.log(result);
+        
+        if (result.ok) {
+          const updatedDb = videos.filter(video => video.id !== videoId)
+  
+          setVideosToDisplay(updatedDb)
+        }
       })
   }
 

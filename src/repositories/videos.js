@@ -1,13 +1,12 @@
-import config from '../config/index.js';
 
-const URL_VIDEOS = `${config.URL_BACKEND}/videos`;
+const URL_VIDEOS = `${process.env.REACT_APP_BACKEND_URL}/videos`;
 
 const create = async (objetoDoVideo) => {
 
     const respostaDoServidor = await fetch(`${URL_VIDEOS}?_embed=videos`, {
         method: 'POST',
         headers: {
-            'Content-type': 'application/json',
+            'Content-Type': 'application/json',
         },
         body: JSON.stringify(objetoDoVideo)
     });
@@ -21,12 +20,10 @@ const create = async (objetoDoVideo) => {
 
 const deleteVideo = (idDoVideo) => {
 
-    console.log(idDoVideo);
-
     return fetch(`${URL_VIDEOS}/${idDoVideo}`, {
         method: 'DELETE',
         headers: {
-            'Content-type': 'application/json',
+            'Content-Type': 'application/json',
         },
     })
 }
