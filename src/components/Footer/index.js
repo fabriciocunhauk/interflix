@@ -1,19 +1,13 @@
 import React from 'react';
 import { FooterBase } from './styles.js';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
     <FooterBase>
-      <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
-      </a>
-      <p>
-        Orgulhosamente criado durante a
-        {' '}
-        <a href="https://www.alura.com.br/">
-          Imersão React da Alura
-        </a>
-      </p>
+      <Link to="/" >
+        <img className="Logo" src={"https://fontmeme.com/permalink/200728/87e70c9eadebead816f7e9fb79622c09.png"} alt="interflix-logo" />
+      </Link>
     </FooterBase>
   );
 }
