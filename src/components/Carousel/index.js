@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { VideoCardGroupContainer, CloseButton, Title, ExtraLink } from './styles.js';
+import { VideoCardGroupContainer, DeleteButton, Title, ExtraLink } from './styles.js';
 import VideoCard from './components/VideoCard/index.js';
 import  { Slider, SliderItem } from './components/Slider/index.js';
 import videosRepository from '../../repositories/videos.js';
@@ -8,22 +8,19 @@ import closeIcon from '../../assets/imagens/icon-close.svg';
 function Carousel({
   ignoreFirstVideo,
   category,
-  color
+  color,
+  setUpdatedDB
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
 
-  const [videosToDisplay, setVideosToDisplay] = useState(videos);
-
   function handleDelete(videoId) {
     videosRepository.deleteVideo(videoId)
       .then(result => {
         if (result.ok) {
-          const updatedDb = videos.filter(video => video.id !== videoId)
-  
-          setVideosToDisplay(updatedDb)
+          setUpdatedDB(true)
         }
       })
   }
@@ -43,15 +40,17 @@ function Carousel({
         </>
       )}
       <Slider>
-        {videosToDisplay.map((video, index) => {
+        {videos.map((video, index) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
 
           return (
-            <SliderItem key={video.titulo}>
+            <SliderItem key={video.id}>
 
-              <CloseButton color={color} onClick={() => handleDelete(video.id)}  src={closeIcon}/>
+              <DeleteButton color={color} onClick={() => handleDelete(video.id)} >
+                <img src={closeIcon} alt="close button" />
+              </DeleteButton>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}

@@ -5,18 +5,19 @@ import categoriasRepository from '../../../repositories/categorias.js'
 import PageDefault from '../../PageDefault/PageDefault.js';
 
  function Home() {
-
   const [dadosIniciais, setDadosIniciais] = useState([]);
+  const [UpdatedDB, setUpdatedDB] = useState(false);
 
   useEffect(() => {
     categoriasRepository.getAllWithVideos()
       .then((categoriasComVideos) => {
         setDadosIniciais(categoriasComVideos);
+        setUpdatedDB(false);
       })
       .catch((err) => {
         console.log(err.message);
       });
-  }, []);
+  }, [UpdatedDB]);
   
   return (
     <PageDefault paddingAll="0 0 50px 0">
@@ -38,6 +39,7 @@ import PageDefault from '../../PageDefault/PageDefault.js';
                 ignoreFirstVideo
                 category={dadosIniciais[0]}
                 color={dadosIniciais[0].cor}
+                setUpdatedDB={setUpdatedDB}
               />
             </div>
           );
@@ -48,6 +50,7 @@ import PageDefault from '../../PageDefault/PageDefault.js';
             key={categoria.id}
             category={categoria}
             color={categoria.cor}
+            setUpdatedDB={setUpdatedDB}
           />
         );
       })}

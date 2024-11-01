@@ -12,7 +12,6 @@ const create = async (objetoDoVideo) => {
 }
 
 const deleteVideo = (idDoVideo) => {
-
     return fetch(`${URL_VIDEOS}/${idDoVideo}`, {
         method: 'DELETE',
         headers: {

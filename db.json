@@ -186,6 +186,12 @@
       "titulo": "Novidades do Angular v9",
       "url": "https://www.youtube.com/watch?v=34uHo7hFmG0",
       "categoriaId": 1
+    },
+    {
+      "titulo": "Como se tornar um desenvolvedor BACKEND",
+      "url": "https://www.youtube.com/watch?v=wXMlMsDvk2M&t=32s&ab_channel=AttekitaDev",
+      "categoriaId": 2,
+      "id": 26
     }
   ]
 }

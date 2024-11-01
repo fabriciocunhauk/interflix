@@ -40,7 +40,9 @@ export const VideoCardGroupContainer = styled.section`
   margin-bottom: 16px;
 `;
 
-export const CloseButton = styled.img`
+export const DeleteButton = styled.button`
+  background: transparent;
+  border: none;
   cursor: pointer;
   position: absolute;
   top: 10px;

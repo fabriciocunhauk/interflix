@@ -24,14 +24,13 @@ const getAll = async () => {
 const getAllWithVideos = async () => {
 
     const respostaDoServidor = await fetch(`${URL_CATEGORIES}?_embed=videos`);
-    if (respostaDoServidor.ok) {
-        const resposta = await respostaDoServidor.json();
+        if (respostaDoServidor.ok) {
+            const resposta = await respostaDoServidor.json();
 
-        return resposta;
-    }
+            return resposta;
+        }
     throw new Error('Nao foi possivel pegar os dados');
 }
-
 
 const exportedObject = {
     createCategory,
