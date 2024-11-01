@@ -19,8 +19,7 @@ import PageDefault from '../../PageDefault/PageDefault.js';
   }, []);
   
   return (
-    <PageDefault>
-
+    <PageDefault paddingAll="0 0 50px 0">
       {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
       {dadosIniciais.map((categoria, index) => {

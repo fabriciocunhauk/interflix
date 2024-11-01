@@ -9,7 +9,7 @@ import categoriasRepository from '../../../../repositories/categorias.js';
 import { NavLink } from '../../../NavLink/index.js';
 
 const CadastroVideo = () => {
-    const history = useNavigate();
+    const navigate = useNavigate();
     const [categorias, setCategorias] = useState([])
     const { handleChange, values } = useForm({
         titulo: '',
@@ -25,26 +25,29 @@ const CadastroVideo = () => {
             })
     }, []);
 
+    const onSubmit = (event) => {
+        event.preventDefault();
+        const categoriaEscolhida = categorias.find(categoria => {
+            return categoria.titulo.toLowerCase() === values.categoria.toLowerCase();
+        });
+
+        videosRepository.create({
+            titulo: values.titulo,
+            url: values.url,
+            categoriaId: categoriaEscolhida.id,
+        }).then((res) => {
+            if (res.ok) {
+                return navigate("/")
+            }
+            throw new Error('Nao foi possivel cadastrar os dados');
+        })
+    }
+
     return (
         <PageDefault>
             <h1>Cadastro de Video</h1>
 
-            <form onSubmit={(event) => {
-                event.preventDefault();
-
-                const categoriaEscolhida = categorias.find(categoria => {
-                    return categoria.titulo.toLowerCase() === values.categoria.toLowerCase();
-                });
-
-                videosRepository.create({
-                    titulo: values.titulo,
-                    url: values.url,
-                    categoriaId: categoriaEscolhida.id,
-                })
-                    .then(() => {
-                        history.push("/");
-                    })
-            }}>
+            <form onSubmit={onSubmit}>
                 <FormField
                     label="Titulo do video"
                     name="titulo"

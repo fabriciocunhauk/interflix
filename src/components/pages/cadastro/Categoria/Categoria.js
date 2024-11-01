@@ -6,43 +6,39 @@ import Button from '../../../Button/index.js';
 import useForm from '../../../../hooks/useForms.js';
 import categoryRepository from '../../../../repositories/categorias.js';
 
+const URL_CATEGORIES = `${process.env.REACT_APP_BACKEND_URL}/categorias`;
+
 const CadastroCategoria = () => {
-    const history = useNavigate();
-    const valoresIniciais = {
+    const navigate = useNavigate();
+    const { handleChange, values, clearForm } = useForm({
         nome: '',
         titulo: '',
         cor: ''
-    }
+    });
 
-    const { handleChange, values, clearForm } = useForm(valoresIniciais);
 
     const [categorias, setCategorias] = useState([]);
 
-    const handleSubmit = (infosDoEvento) => {
-        infosDoEvento.preventDefault();
-
-        setCategorias([
-            ...categorias, values
-        ]);
+    const handleSubmit = (event) => {
+        event.preventDefault();
 
         categoryRepository.createCategory({
             nome: values.nome,
             titulo: values.titulo,
             cor: values.cor,
+        }).then((res) => {
+            console.log(res)
+            if (res.ok) {
+                return navigate("/")
+            }
+            throw new Error('Nao foi possivel cadastrar os dados');
         })
-            .then(() => {
-                history.push("/");
-            })
 
         clearForm();
     }
 
     useEffect(() => {
-        const URL = window.location.hostname.includes('localhost')
-            ? 'http://localhost:8080/categorias'
-            : "https://interflix.herokuapp.com/categorias";
-
-        fetch(URL)
+        fetch(URL_CATEGORIES)
             .then(async (respostaDoServidor) => {
                 const resposta = await respostaDoServidor.json();
                 setCategorias([
@@ -52,7 +48,7 @@ const CadastroCategoria = () => {
     }, []);
 
     return (
-        <PageDefault>
+        <PageDefault paddingAll="50px 50px">
             <h1>Cadastro de Categoria: {values.nome}</h1>
 
             <form onSubmit={handleSubmit}>

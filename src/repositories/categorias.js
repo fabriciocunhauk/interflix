@@ -1,20 +1,13 @@
 const URL_CATEGORIES = `${process.env.REACT_APP_BACKEND_URL}/categorias`;
 
 const createCategory = async (objetoDoVideo) => {
-
-    const respostaDoServidor = await fetch(`${URL_CATEGORIES}`, {
+    return await fetch(`${URL_CATEGORIES}`, {
         method: 'POST',
         headers: {
             'Content-type': 'application/json',
         },
         body: JSON.stringify(objetoDoVideo)
     });
-    if (respostaDoServidor.ok) {
-        const resposta = await respostaDoServidor.json();
-
-        return resposta;
-    }
-    throw new Error('Nao foi possivel cadastrar os dados');
 }
 
 const getAll = async () => {
