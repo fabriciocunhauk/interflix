@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { VideoCardGroupContainer, DeleteButton, Title, ExtraLink } from './styles.js';
 import VideoCard from './components/VideoCard/index.js';
 import  { Slider, SliderItem } from './components/Slider/index.js';
@@ -20,7 +20,7 @@ function Carousel({
     videosRepository.deleteVideo(videoId)
       .then(result => {
         if (result.ok) {
-          setUpdatedDB(true)
+          return setUpdatedDB(true)
         }
       })
   }

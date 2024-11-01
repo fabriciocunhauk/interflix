@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PageDefault from '../../../PageDefault/PageDefault.js';
 import useForm from '../../../../hooks/useForms.js';
-import FormField from '../../../FormField/index.js';
+import FormField, { Select } from '../../../FormField/index.js';
 import Button from '../../../Button/index.js';
 import videosRepository from '../../../../repositories/videos.js';
 import categoriasRepository from '../../../../repositories/categorias.js';
@@ -62,12 +62,15 @@ const CadastroVideo = () => {
                     onChange={handleChange}
                 />
 
-                <FormField
-                    label="Categoria"
-                    name="categoria"
-                    value={values.categoria}
-                    onChange={handleChange}
-                />
+                <Select name="categoria" onChange={handleChange}>
+                    {categorias.map((categoria) => {
+                        return (
+                            <option key={categoria.id} value={categoria.categoria}>
+                                {categoria.titulo}
+                            </option>
+                        )
+                    })}
+                </Select>
 
                 <Button type="submit">
                     Cadastrar
