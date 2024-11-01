@@ -40,7 +40,11 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "ajv": "^7.2.4"
+    "@eslint/js": "^9.13.0",
+    "ajv": "^7.2.4",
+    "eslint": "^9.13.0",
+    "eslint-plugin-react": "^7.37.2",
+    "globals": "^15.11.0"
   },
   "resolutions": {
     "styled-components": "^5"

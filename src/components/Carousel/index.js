@@ -8,6 +8,7 @@ import closeIcon from '../../assets/imagens/icon-close.svg';
 function Carousel({
   ignoreFirstVideo,
   category,
+  color
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
@@ -50,7 +51,7 @@ function Carousel({
           return (
             <SliderItem key={video.titulo}>
 
-              <CloseButton onClick={() => handleDelete(video.id)}  src={closeIcon}/>
+              <CloseButton color={color} onClick={() => handleDelete(video.id)}  src={closeIcon}/>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}

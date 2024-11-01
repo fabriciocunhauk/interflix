@@ -19,7 +19,7 @@ import PageDefault from '../../PageDefault/PageDefault.js';
   }, []);
   
   return (
-    <PageDefault paddingAll={0}>
+    <PageDefault>
 
       {dadosIniciais.length === 0 && (<div>Loading...</div>)}
 
@@ -27,15 +27,18 @@ import PageDefault from '../../PageDefault/PageDefault.js';
         if (index === 0) {
           return (
             <div key={categoria.id}>
-              {categoria.videos.length && <BannerMain
-                videoTitle={categoria.videos[0].titulo}
-                url={categoria.videos[0].url}
-                videoDescription={"O que e o front-end"}
-              />}
+              {categoria.videos.length && 
+                <BannerMain
+                  videoTitle={dadosIniciais[0].videos[0].titulo}
+                  url={dadosIniciais[0].videos[0].url}
+                  videoDescription={"O que e o front-end"}
+                />
+              }
 
               <Carousel
                 ignoreFirstVideo
                 category={dadosIniciais[0]}
+                color={dadosIniciais[0].cor}
               />
             </div>
           );
@@ -45,6 +48,7 @@ import PageDefault from '../../PageDefault/PageDefault.js';
           <Carousel
             key={categoria.id}
             category={categoria}
+            color={categoria.cor}
           />
         );
       })}

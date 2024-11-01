@@ -49,6 +49,6 @@ export const CloseButton = styled.img`
   padding: 2px;
 
   &:hover {
-        background: #6BD1FF;
+        background: ${ props => props.color };
     }
 `;

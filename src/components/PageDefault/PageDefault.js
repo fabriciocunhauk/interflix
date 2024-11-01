@@ -1,7 +1,7 @@
 import React from 'react';
 import Menu from '../Menu/Menu.js';
 import Footer from '../Footer/index.js';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const Main = styled.main`
     display: flex;
@@ -10,19 +10,14 @@ const Main = styled.main`
     flex: 1;
     background-color: var(--black);
     color: var(--white);
-    padding-top: 50px;
-    padding-left: 5%;
-    padding-right: 5%;
-    ${({ paddingAll }) => css`
-    padding: ${paddingAll};
-    `}
+    padding-bottom: 40px;
 `;
 
-const PageDefault = ({ children, paddingAll }) => {
+const PageDefault = ({ children }) => {
     return (
         <>
             <Menu />
-            <Main paddingAll={paddingAll}>
+            <Main>
                 {children}
             </Main>
             <Footer />
