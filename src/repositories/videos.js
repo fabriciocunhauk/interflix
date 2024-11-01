@@ -2,7 +2,7 @@
 const URL_VIDEOS = `${process.env.REACT_APP_BACKEND_URL}/videos`;
 
 const create = async (objetoDoVideo) => {
-    return await fetch(`${URL_VIDEOS}?_embed=videos`, {
+    return await fetch(`${URL_VIDEOS}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
