@@ -10,3 +10,13 @@ export default [
   pluginJs.configs.recommended,
   pluginReact.configs.flat.recommended,
 ];
+
+module.exports = {
+  extends: [
+    'plugin:prettier/recommended',
+  ],
+  plugins: ['prettier'],
+  rules: {
+    'prettier/prettier': 'error',
+  },
+};
