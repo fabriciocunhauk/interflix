@@ -26,13 +26,7 @@ const CadastroCategoria = () => {
             nome: values.nome,
             titulo: values.titulo,
             cor: values.cor,
-        }).then((res) => {
-            console.log(res)
-            if (res.ok) {
-                return navigate("/")
-            }
-            throw new Error('Nao foi possivel cadastrar os dados');
-        })
+        }).then(() => navigate("/"))
 
         clearForm();
     }
@@ -77,8 +71,7 @@ const CadastroCategoria = () => {
                     onChange={handleChange}
                 />
 
-                <Button
-                    onClick={() => handleSubmit}>
+                <Button onClick={() => handleSubmit}>
                     Cadastrar
                 </Button>
             </form>

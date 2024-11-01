@@ -20,9 +20,7 @@ const CadastroVideo = () => {
     useEffect(() => {
         categoriasRepository
             .getAll()
-            .then(categoriasFromServer => {
-                setCategorias(categoriasFromServer)
-            })
+            .then(categoriasFromServer =>  setCategorias(categoriasFromServer))
     }, []);
 
     const onSubmit = (event) => {
@@ -35,12 +33,7 @@ const CadastroVideo = () => {
             titulo: values.titulo,
             url: values.url,
             categoriaId: categoriaEscolhida.id,
-        }).then((res) => {
-            if (res.ok) {
-                return navigate("/")
-            }
-            throw new Error('Nao foi possivel cadastrar os dados');
-        })
+        }).then(() => navigate("/"))
     }
 
     return (
@@ -63,6 +56,9 @@ const CadastroVideo = () => {
                 />
 
                 <Select name="categoria" onChange={handleChange}>
+                    <option selected disabled>
+                        Categoria
+                    </option>
                     {categorias.map((categoria) => {
                         return (
                             <option key={categoria.id} value={categoria.categoria}>
