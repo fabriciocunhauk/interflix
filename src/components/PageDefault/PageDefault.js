@@ -6,7 +6,6 @@ import styled, { css } from 'styled-components';
 const Main = styled.main`
     display: flex;
     flex-direction: column;
-    gap: 40px;
     background-color: var(--black);
     color: var(--white);
     flex: 1;

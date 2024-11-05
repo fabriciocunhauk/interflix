@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Container = styled.ul`
   display: flex;
   overflow: auto;
-  padding: 0;
+  padding: 24px 0 24px 0;
   margin: 0;
   .slick-prev,
   .slick-next {
@@ -32,7 +32,6 @@ const Container = styled.ul`
 export const SliderItem = styled.li`
   position: relative;
   display: flex;
-  margin-right: 16px;
   outline: none;
 `;
 

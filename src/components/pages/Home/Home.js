@@ -36,7 +36,6 @@ import PageDefault from '../../PageDefault/PageDefault.js';
               }
 
               <Carousel
-                ignoreFirstVideo
                 category={dadosIniciais[0]}
                 color={dadosIniciais[0].cor}
                 setUpdatedDB={setUpdatedDB}

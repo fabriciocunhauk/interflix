@@ -1,5 +1,6 @@
 
 const URL_VIDEOS = `${process.env.REACT_APP_BACKEND_URL}/videos`;
+const URL_CATEGORY = `${process.env.REACT_APP_BACKEND_URL}/categorias`;
 
 const create = async (objetoDoVideo) => {
     return await fetch(`${URL_VIDEOS}`, {
@@ -11,8 +12,17 @@ const create = async (objetoDoVideo) => {
     });
 }
 
-const deleteVideo = (idDoVideo) => {
-    return fetch(`${URL_VIDEOS}/${idDoVideo}`, {
+const deleteVideo = (videoId) => {
+    return fetch(`${URL_VIDEOS}/${videoId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+}
+
+const deleteCategory = (categoryId) => {
+    return fetch(`${URL_CATEGORY}/${categoryId}`, {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',
@@ -22,7 +32,8 @@ const deleteVideo = (idDoVideo) => {
 
 const exportedObject = {
     create,
-    deleteVideo
+    deleteVideo,
+    deleteCategory
 };
 
 export default exportedObject;

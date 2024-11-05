@@ -40,7 +40,7 @@ const CadastroVideo = () => {
         <PageDefault>
             <h1>Cadastro de Video</h1>
 
-            <form onSubmit={onSubmit}>
+            <form onSubmit={onSubmit} style={{marginBottom: "24px"}}>
                 <FormField
                     label="Titulo do video"
                     name="titulo"
